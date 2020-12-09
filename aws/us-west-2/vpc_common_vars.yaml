@@ -2,7 +2,7 @@ region: us-west-2
 vpc_name: velbridgeconn
 bridge_domains:
   - bcrstage.azbcbs.us
-  - bcrstage.azbcbs.us
+  - bcrprod.azbcbs.us
 buckets:
   - azblue-bcr-automation-secrets.terraform/mirth-dev
   - azblue-bcr-automation-secrets.terraform/mirth-prod
