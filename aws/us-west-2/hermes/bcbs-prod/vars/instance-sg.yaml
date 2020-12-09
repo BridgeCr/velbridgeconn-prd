@@ -1,0 +1,37 @@
+ingress_with_self:
+  - rule: "all-all"
+
+ingress_with_cidr_blocks:
+  - from_port: 22
+    to_port:  22
+    protocol: 6
+    cidr_blocks: "10.20.0.0/16,172.20.0.0/16"
+    description: "SSH"
+  - from_port: 8443
+    to_port:  8443
+    protocol: 6
+    cidr_blocks: "10.20.0.0/16"
+    description: "HTTPS Mirth"
+  - from_port: 8080
+    to_port:  8080
+    protocol: 6
+    cidr_blocks: "10.20.0.0/16"
+    description: "HTTP Mirth"
+  - from_port: 14001
+    to_port: 14001
+    protocol: 6
+    cidr_blocks: "172.27.0.0/16,172.28.0.0/16,10.20.0.0/16"
+    description: "BCBS Enrollment API"
+  - from_port: 9140
+    to_port:  9140
+    protocol: 6
+    cidr_blocks: "172.20.0.0/16"
+    description: "Allow bridge-utils to query Mirth Exporter."
+
+ingerss_rules: ["http-8080-tcp", "https-8443-tcp"]
+
+egress_with_cidr_blocks:
+  - from_port: 0
+    to_port: 0
+    protocol: -1
+    cidr_blocks: "0.0.0.0/0"
