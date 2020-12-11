@@ -1,0 +1,11 @@
+clusterName: velbridgeconn-prod
+awsRegion: "us-west-2"
+awsVpcID: "vpc-025c5fb7bddd4f741"
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 100Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
