@@ -85,10 +85,10 @@ resource "null_resource" "deploy_manifests" {
   }
 }
 
-resource "null_resource" "add_to_rancher" {
-  count = var.rancher_add ? 1 : 0
+// resource "null_resource" "add_to_rancher" {
+//   count = var.rancher_add ? 1 : 0
 
-  provisioner "local-exec" {
-    command = "${var.rancher_import_cmd} --server=${data.aws_eks_cluster.cluster.endpoint} --insecure-skip-tls-verify=true --token=${data.aws_eks_cluster_auth.cluster.token}"
-  }
-}
+//   provisioner "local-exec" {
+//     command = "${var.rancher_import_cmd} --server=${data.aws_eks_cluster.cluster.endpoint} --insecure-skip-tls-verify=true --token=${data.aws_eks_cluster_auth.cluster.token}"
+//   }
+// }
