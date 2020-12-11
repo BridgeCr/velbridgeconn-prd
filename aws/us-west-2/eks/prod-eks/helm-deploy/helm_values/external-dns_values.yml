@@ -1,8 +1,8 @@
 # restrict to changes to these domains
 domainFilters:
-  - bcrprod.us
+  - bcrprod.azbcbs.us
 # descriptive text to show who created record
 txtOwnerId: "externaldns"
 aws:
   zoneType: public
-  region: "us-east-1"
+  region: "us-west-2"

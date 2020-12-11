@@ -15,20 +15,20 @@ This Module Directory creates the following resources per environment:
 
 - `vpc_common_vars.yaml` in the root of the vpc folder ex. `prod/vpc_common_vars.yaml`
 ```yaml
-region: us-east-1
+region: us-west-2
 # This is used by the env-name module to get all the metadata we need to know about the VPC to
 # create the application stack
-vpc_name: Bridge-Prod
+vpc_name: velbridgeconn
 
 # The env-module can pull route 53 domain information and return as output
 # route53_zones map
 bridge_domains:
-  - bcrstage.us
-  - bcrprod.us
+  - bcrstage.azbcbs.us
+  - bcrprod.azbcbs.us
 
 # Returns a map of bucket objects from env-name
 buckets:
-  - bcr-automation-secrets.terraform/mirth-dev
+  - azblue-bcr-automation-secrets.terraform/mirth-dev
 ```
 - `env_common.yaml` in the environment folder for hermes
 
@@ -65,16 +65,16 @@ resource "aws_alb_target_group_attachment" "this" {
 To change the target for a target group add the key `instance_id` to the map for the path. 
 
 ```yaml
-  stg-Wellspan-Livongo-Epic:
-    path_pattern: "/LIVONGO-SSO/saml"
+  stg-customer-name:
+    path_pattern: "/customer/saml"
     backend_port: "9035"
     backend_protocol: "HTTP"
     health_check_interval: 300
 ```
 
 ```yaml
-  stg-Wellspan-Livongo-Epic:
-    path_pattern: "/LIVONGO-SSO/saml"
+  stg-customer-name:
+    path_pattern: "/customer/saml"
     backend_port: "9035"
     backend_protocol: "HTTP"
     health_check_interval: 300

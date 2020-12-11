@@ -36,7 +36,7 @@ dependency "alb" {
 
 inputs = merge(
 {
-  provider_region = "us-east-1"
+  provider_region = "us-west-2"
   zone_id = dependency.vpc.outputs.route53_zones[local.env_common_vars.bridge_domain].id
   name    = "${local.env_common_vars.r53_record}."
   type    = "A"

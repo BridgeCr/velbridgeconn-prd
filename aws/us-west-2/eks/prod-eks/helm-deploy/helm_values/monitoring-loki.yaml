@@ -18,7 +18,7 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-send-timeout: "500"
     kubernetes.io/ingress.class: "nginx-ingress-internal"
   hosts:
-    - host: loki.bcrprod.us
+    - host: loki.bcrprod.azbcbs.us
       paths: 
         - /
   tls: []

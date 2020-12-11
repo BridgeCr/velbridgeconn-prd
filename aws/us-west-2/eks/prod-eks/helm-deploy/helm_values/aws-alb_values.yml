@@ -1,6 +1,6 @@
-clusterName: bridge-prod-02
-awsRegion: "us-east-1"
-awsVpcID: "vpc-0c27b2f35a6572640"
+clusterName: velbridgeconn-prod
+awsRegion: "us-west-2"
+awsVpcID: "vpc-025c5fb7bddd4f741"
 
 resources:
   requests:
