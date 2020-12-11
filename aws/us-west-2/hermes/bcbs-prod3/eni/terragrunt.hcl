@@ -42,7 +42,7 @@ dependency "albsg" {
 inputs = merge(
   yamldecode(file("../vars/eni.yaml")),
   {
-  provider_region = "us-east-1"
+  provider_region = "us-west-2"
   security_groups = [dependency.sg.outputs.this_security_group_id, dependency.albsg.outputs.this_security_group_id]
   description = "${local.env_common_vars.description_prefix} network interface"
   tags = merge(local.env_common_vars.tags, {

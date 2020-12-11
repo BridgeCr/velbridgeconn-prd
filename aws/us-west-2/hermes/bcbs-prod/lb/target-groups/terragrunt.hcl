@@ -9,11 +9,11 @@ include {
 }
 
 dependencies {
-  paths = ["../../../env-data", "../alb", "../../instance"]
+  paths = ["../../../../vpc", "../alb", "../../instance"]
 }
 
 dependency "vpc" {
-  config_path  = "../../../env-data"
+  config_path  = "../../../../vpc"
   skip_outputs = false
 
   mock_outputs = {

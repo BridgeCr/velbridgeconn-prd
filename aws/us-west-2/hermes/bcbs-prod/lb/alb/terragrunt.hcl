@@ -12,10 +12,21 @@ include {
 }
 
 dependencies {
-  paths = ["../../../env-data", "../sg", "../../s3"]
+  paths = ["../../../env-data", "../sg", "../../s3", "../../../../vpc"]
 }
 
 dependency "vpc" {
+  config_path  = "../../../../vpc"
+  skip_outputs = false
+
+  mock_outputs = {
+    vpc_id = "mock-vpc-id"
+    public_subnet = ["mock-public-subnet-id"]
+    private_subnet_ids = ["mock-private-subnet-id"]
+  }
+}
+
+dependency "env" {
   config_path  = "../../../env-data"
   skip_outputs = false
 
@@ -50,7 +61,7 @@ inputs = merge(
     provider_region = "us-west-2"
     name = "${local.env_common_vars.name}-external-alb"
     security_groups = [dependency.alb-sg.outputs.this_security_group_id]
-    subnets = dependency.vpc.outputs.public_subnet_ids
+    subnets = dependency.vpc.outputs.public_subnets
     vpc_id = dependency.vpc.outputs.vpc_id
     tags = merge(local.env_common_vars.tags, {
       Name = "${local.env_common_vars.name}-external-alb"
@@ -64,7 +75,7 @@ inputs = merge(
 
     https_listeners = [
       {
-        certificate_arn = dependency.vpc.outputs.certs[local.env_common_vars.bridge_domain].arn
+        certificate_arn = dependency.env.outputs.certs[local.env_common_vars.bridge_domain].arn
         port = 443
         protocol = "HTTPS"
         action_type = "fixed-response"

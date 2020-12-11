@@ -61,7 +61,7 @@ inputs = merge(
   yamldecode(file("../vars/instance.yaml")),
   {
     name  = local.env_common_vars.name
-    provider_region = "us-east-1"
+    provider_region = "us-west-2"
     description = "${local.env_common_vars.description_prefix} Instance"
     user_data = templatefile("../../templates/hermes_userdata.tpl.sh", {
       version = local.env_common_vars.hermes_version

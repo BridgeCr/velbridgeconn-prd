@@ -9,11 +9,11 @@ include {
 }
 
 dependencies {
-  paths = ["../../../env-data", "../alb", "../../instance"]
+  paths = ["../../../../vpc", "../alb", "../../instance"]
 }
 
 dependency "vpc" {
-  config_path  = "../../../env-data"
+  config_path  = "../../../../vpc"
   skip_outputs = false
 
   mock_outputs = {
@@ -42,7 +42,7 @@ dependency "instance" {
 inputs = merge(
   yamldecode(file("../../vars/target-groups.yaml")),
   {
-    provider_region = "us-east-1"
+    provider_region = "us-west-2"
     listener_arn = element(dependency.alb.outputs.https_listener_arns, 0)
     vpc_id = dependency.vpc.outputs.vpc_id
     instance_id = element(tolist(dependency.instance.outputs.id), 0)
