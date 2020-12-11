@@ -1,5 +1,5 @@
 secrets:
-    bcr-automation-secrets:
+    azblue-bcr-automation-secrets:
       key: elastic_auth.json
 
 namespaces:

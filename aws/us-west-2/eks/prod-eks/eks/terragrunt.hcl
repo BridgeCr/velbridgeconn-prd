@@ -66,7 +66,7 @@ inputs = merge(
     worker_create_security_group = false
     worker_security_group_id = dependency.sg.outputs.this_security_group_id
     config_output_path = "${get_terragrunt_dir()}/"
-    cluster_name         = "velbridgeconn-prod"
+    cluster_name         = "azbcbs-prod"
     workers_additional_policies = [
         "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy",
         "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
@@ -79,13 +79,13 @@ inputs = merge(
         asg_max_size         = 5
         asg_min_size         = 3
         instance_type        = "c5.large"
-        name                 = "velbridgeconn-eks-prod"
+        name                 = "eks-prod"
         subnets              = dependency.vpc.outputs.private_subnets
         key_name             = "bridge"
         additional_userdata  = templatefile("files/userdata.sh", {
-        cluster_name         = "velbridgeconn-prod"
+        cluster_name         = "azbcbs-prod"
         })
-        kubelet_extra_args   = "--node-labels=pool=velbridgeconn,nodegroup=velbridgeconn"
+        kubelet_extra_args   = "--node-labels=pool=azbcbs,nodegroup=azbcbs"
 
         tags = [
           {
@@ -95,16 +95,16 @@ inputs = merge(
           },
           {
             key                 = "Service"
-            value               = "velbridgeconn-prod"
+            value               = "azbcbs-prod"
             propagate_at_launch = true
           },
           {
             key                 = "Cluster"
-            value               = "velbridgeconn-prod"
+            value               = "azbcbs-prod"
             propagate_at_launch = true
           },
           {
-            key                 = "kubernetes.io/cluster/velbridgeconn-prod"
+            key                 = "kubernetes.io/cluster/azbcbs-prod"
             value               = "owned"
             propagate_at_launch = true
           },

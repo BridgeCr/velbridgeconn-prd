@@ -4,4 +4,4 @@ Order of operations on plan/apply
 3. (tg apply folder) eks (Be advised that applying the aws-auth configmap will require that you manually run aws eks update-kubeconfig --region us-east-1 --name (cluster-name) after the aws eks cluster is built)
 4. (tg apply folder) namespaces
 5. kubectl apply helm/tiller (https://github.com/BridgeCr/bridge-infrastructure/blob/5fd246f1f088f386ffb36a34e6f5e54428d7df1b/kubernetes/helm-tiller/README.md)
-6. (tg apply folder) helm-deploy 
+6. (tg apply folder) helm-deploy
