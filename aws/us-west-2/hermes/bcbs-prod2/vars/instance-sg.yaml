@@ -18,7 +18,7 @@ ingress_with_cidr_blocks:
     cidr_blocks: "10.208.16.0/21"
     description: "HTTP Mirth"
   - from_port: 14001
-    to_port: 14001
+    to_port:  14001
     protocol: 6
     cidr_blocks: "10.208.16.0/21"
     description: "BCBS Enrollment API"
@@ -27,8 +27,6 @@ ingress_with_cidr_blocks:
     protocol: 6
     cidr_blocks: "10.208.16.0/21"
     description: "Allow bridge-utils to query Mirth Exporter."
-
-ingerss_rules: ["http-8080-tcp", "https-8443-tcp"]
 
 egress_with_cidr_blocks:
   - from_port: 0

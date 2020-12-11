@@ -1,0 +1,17 @@
+database_name: mirthdb
+username: mirthdb
+engine: "aurora-postgresql"
+engine_version: "10.11"
+allocated_storage: 1000
+instance_type: "db.r5.large"
+backup_retention_period: 30
+family: aurora-postgresql10
+iam_database_authentication_enabled: false
+create_security_group: true
+enabled_cloudwatch_logs_exports:
+  - "postgresql"
+replica_count: 1
+apply_immediately: false
+skip_final_snapshot: false
+storage_encrypted: true
+deletion_protection: false
