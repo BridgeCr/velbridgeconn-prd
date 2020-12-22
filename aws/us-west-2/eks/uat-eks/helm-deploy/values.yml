@@ -1,0 +1,47 @@
+
+rancher_add: false
+
+default_charts:
+  aws-alb-ingress-controller:
+    repository: "https://kubernetes-charts-incubator.storage.googleapis.com"
+    chart_name: "aws-alb-ingress-controller"
+    namespace: "devops-utils"
+    values: "helm_values/aws-alb_values.yml"
+    version: "1.0.2"    
+  external-dns:
+    repository: "stable"
+    chart_name: "external-dns"
+    namespace: "devops-utils"
+    values: "helm_values/external-dns_values.yml"
+  nginx-ingress-internal-controller:
+    repository: "ingress-nginx"
+    chart_name: "ingress-nginx"
+    namespace: "nginx-ingress-internal"
+    version: "2.15.0"
+    values: "helm_values/nginx-ingress-internal.yaml"
+  nginx-ingress-public-controller:
+    repository: "ingress-nginx"
+    chart_name: "ingress-nginx"
+    namespace: "nginx-ingress-public"
+    version: "2.15.0"
+    values: "helm_values/nginx-ingress-public.yaml"
+  # monitoring-prometheus:
+  #   repository: "stable"
+  #   chart_name: "prometheus"
+  #   namespace: "monitoring"
+  #   values: "helm_values/monitoring-prometheus.yaml"
+  # monitoring-loki:
+  #   repository: "https://grafana.github.io/loki/charts"
+  #   chart_name: "loki"
+  #   namespace: "monitoring"
+  #   values: "helm_values/monitoring-loki.yaml"
+  # monitoring-promtail:
+  #   repository: "https://grafana.github.io/loki/charts"
+  #   chart_name: "promtail"
+  #   namespace: "monitoring"
+  #   values: "helm_values/monitoring-promtail.yaml"
+  # filebeat:
+  #   repository: "https://helm.elastic.co"
+  #   chart_name: "filebeat"
+  #   namespace: "devops-utils"
+  #   values: "helm_values/filebeat_values.yml"

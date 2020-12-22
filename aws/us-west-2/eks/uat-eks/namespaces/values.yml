@@ -1,0 +1,13 @@
+secrets:
+    azblue-bcr-automation-secrets:
+      key: elastic_auth.json
+
+namespaces:
+  devops-utils:
+    quota_pods: "30"
+    quota_mem: "5Gi"
+    quota_cpu: "6"    
+  uat-bcbs:
+    quota_pods: "16"
+    quota_mem: 4096Mi
+    quota_cpu: "4"
