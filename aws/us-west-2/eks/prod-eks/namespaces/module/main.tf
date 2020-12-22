@@ -54,7 +54,7 @@ resource "kubernetes_resource_quota" "quotas" {
 }
 
 data "aws_s3_bucket_object" "elastic_s3_secret" {
-  bucket = "bcr-automation-secrets"
+  bucket = "azblue-bcr-automation-secrets"
   key = "terraform/elastic_auth.json"
 }
 

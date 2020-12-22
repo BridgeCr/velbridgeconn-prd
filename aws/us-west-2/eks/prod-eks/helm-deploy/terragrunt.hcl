@@ -30,7 +30,7 @@ EOF
 }
 
 dependencies {
-  paths = ["../eks", "../rancher-cluster"]
+  paths = ["../eks"]
 }
 
 dependency "eks" {
@@ -42,14 +42,14 @@ dependency "eks" {
   }
 }
 
-dependency "rancher_import" {
-  config_path  = "../rancher-cluster"
-  skip_outputs = false
+// dependency "rancher_import" {
+//   config_path  = "../rancher-cluster"
+//   skip_outputs = false
 
-  mock_outputs = {
-    register_command = "mock-register-command"
-  }
-}
+//   mock_outputs = {
+//     register_command = "mock-register-command"
+//   }
+// }
 
 inputs = merge(
   yamldecode(file(find_in_parent_folders("common_vars.yaml"))),
@@ -58,6 +58,6 @@ inputs = merge(
   {
     cluster_id = dependency.eks.outputs.cluster_id
     deploy_manifests  = []
-    rancher_import_cmd = dependency.rancher_import.outputs.register_command
+    // rancher_import_cmd = dependency.rancher_import.outputs.register_command
   }
 )

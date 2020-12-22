@@ -1,5 +1,5 @@
 
-rancher_add: true
+rancher_add: false
 
 default_charts:
   aws-alb-ingress-controller:
@@ -25,21 +25,21 @@ default_charts:
     namespace: "nginx-ingress-public"
     version: "2.15.0"
     values: "helm_values/nginx-ingress-public.yaml"
-  monitoring-prometheus:
-    repository: "stable"
-    chart_name: "prometheus"
-    namespace: "monitoring"
-    values: "helm_values/monitoring-prometheus.yaml"
-  monitoring-loki:
-    repository: "https://grafana.github.io/loki/charts"
-    chart_name: "loki"
-    namespace: "monitoring"
-    values: "helm_values/monitoring-loki.yaml"
-  monitoring-promtail:
-    repository: "https://grafana.github.io/loki/charts"
-    chart_name: "promtail"
-    namespace: "monitoring"
-    values: "helm_values/monitoring-promtail.yaml"
+  # monitoring-prometheus:
+  #   repository: "stable"
+  #   chart_name: "prometheus"
+  #   namespace: "monitoring"
+  #   values: "helm_values/monitoring-prometheus.yaml"
+  # monitoring-loki:
+  #   repository: "https://grafana.github.io/loki/charts"
+  #   chart_name: "loki"
+  #   namespace: "monitoring"
+  #   values: "helm_values/monitoring-loki.yaml"
+  # monitoring-promtail:
+  #   repository: "https://grafana.github.io/loki/charts"
+  #   chart_name: "promtail"
+  #   namespace: "monitoring"
+  #   values: "helm_values/monitoring-promtail.yaml"
   # filebeat:
   #   repository: "https://helm.elastic.co"
   #   chart_name: "filebeat"
