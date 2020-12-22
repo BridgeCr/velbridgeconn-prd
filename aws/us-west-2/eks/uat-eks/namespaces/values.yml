@@ -9,5 +9,5 @@ namespaces:
     quota_cpu: "6"    
   uat-bcbs:
     quota_pods: "16"
-    quota_mem: 4096Mi
+    quota_mem: "4Gi"
     quota_cpu: "4"
