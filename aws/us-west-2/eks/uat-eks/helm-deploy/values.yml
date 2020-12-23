@@ -3,7 +3,7 @@ rancher_add: false
 
 default_charts:
   aws-alb-ingress-controller:
-    repository: "https://kubernetes-charts-incubator.storage.googleapis.com"
+    repository: "https://charts.helm.sh/incubator"
     chart_name: "aws-alb-ingress-controller"
     namespace: "devops-utils"
     values: "helm_values/aws-alb_values.yml"
@@ -13,14 +13,14 @@ default_charts:
     chart_name: "external-dns"
     namespace: "devops-utils"
     values: "helm_values/external-dns_values.yml"
-  nginx-ingress-internal-controller:
-    repository: "ingress-nginx"
+  nginx-ingress-internal:
+    repository: "https://kubernetes.github.io/ingress-nginx"
     chart_name: "ingress-nginx"
     namespace: "nginx-ingress-internal"
     version: "2.15.0"
     values: "helm_values/nginx-ingress-internal.yaml"
-  nginx-ingress-public-controller:
-    repository: "ingress-nginx"
+  nginx-ingress-public:
+    repository: "https://kubernetes.github.io/ingress-nginx"
     chart_name: "ingress-nginx"
     namespace: "nginx-ingress-public"
     version: "2.15.0"
