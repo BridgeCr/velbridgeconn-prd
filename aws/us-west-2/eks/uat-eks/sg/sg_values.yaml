@@ -1,0 +1,21 @@
+name: azbcbs-uat-eks
+description: azbcbs-eks-uat Cluster SG
+allowed_ingress_cidrs: ["10.208.16.0/21","10.20.0.0/16"]
+
+ingress_with_self:
+    - rule: "all-all"
+
+ingress_with_cidr_blocks:
+  - from_port: 80
+    to_port:  65535
+    protocol: 6
+    cidr_blocks: "10.208.16.0/21,10.20.0.0/16"
+  - from_port: 22
+    to_port:  22
+    protocol: 6
+    cidr_blocks: "10.208.16.0/21,10.20.0.0/16"
+egress_with_cidr_blocks:
+  - from_port: 0
+    to_port: 0
+    protocol: -1
+    cidr_blocks: "0.0.0.0/0"

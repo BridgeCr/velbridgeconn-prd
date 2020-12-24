@@ -1,0 +1,23 @@
+# Name is used to name all resources
+# This is the name prefix where the suffix is the resource type
+name: bcbs-uat2
+
+# Bridge_domain is used for route53 record creation
+bridge_domain: bcruat.azbcbs.us
+
+# This is the A record entry for the dns record
+r53_record: bcbs-uat2
+
+# Description_prefix is concatenated with resource descriptions
+description_prefix: BCBS UAT2 Hermes
+hermes_version: 3.7.1.b243
+
+# These tags are a sefault set
+# Each module appends Name and any other appropriate tags for the resource
+# To add resource specific tags please do so in the module terragrunt.hcl
+tags:
+  App: Hermes
+  Version: 3.7.1.b243
+  TG_Managed: true
+  Env: bcbs-uat2
+  EC2KeyName: bridge

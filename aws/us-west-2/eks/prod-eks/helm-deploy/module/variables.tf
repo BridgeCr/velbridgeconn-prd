@@ -20,7 +20,7 @@ variable "default_charts" {
     ```
     default_charts = {
       aws-alb = {
-        repository = "https://kubernetes-charts-incubator.storage.googleapis.com"
+        repository = ""https://charts.helm.sh/incubator""
         chart_name = "aws-alb-ingress-controller"
         namespace = "devops-utils"
         version = "1.0.0"

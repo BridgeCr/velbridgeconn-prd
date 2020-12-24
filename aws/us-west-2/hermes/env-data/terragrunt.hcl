@@ -1,5 +1,5 @@
 terraform {
-    source = "git@github.com:dahendel/terraform-module-vpc-data.git"
+    source = "git@github.com:beppenstein/terraform-module-vpc-data.git"
 }
 
 locals {

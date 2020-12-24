@@ -75,9 +75,9 @@ inputs = merge(
       ]
     worker_groups = [
       {
-        asg_desired_capacity = 3
-        asg_max_size         = 5
-        asg_min_size         = 3
+        asg_desired_capacity = 5
+        asg_max_size         = 7
+        asg_min_size         = 5
         instance_type        = "c5.large"
         name                 = "eks-prod"
         subnets              = dependency.vpc.outputs.private_subnets

@@ -1,0 +1,25 @@
+cluster_version: "1.17"
+write_kubeconfig: false
+patch_manager: "yes"
+cluster_create_security_group: false
+cluster_create_timeout: "20m"
+cluster_delete_timeout: "20m"
+worker_create_security_group: true
+worker_sg_ingress_from_port: "80"
+cluster_endpoint_private_access: true
+cluster_endpoint_public_access: false
+manage_aws_auth: true
+map_roles:
+  - rolearn: arn:aws:iam::499898277306:role/jenkins-build-server
+    username: jenkins-build-server
+    groups: ["system:masters"]
+  - rolearn: arn:aws:iam::499898277306:role/jenkins-base
+    username: new-jenkins
+    groups: ["system:masters"]
+map_users:
+  - userarn: "arn:aws:iam::499898277306:user/beppenstein@bridgeconnector.co"
+    username: "beppenstein@bridgeconnector.co"
+    groups: ["system:masters"]
+  - userarn: "arn:aws:iam::499898277306:user/dmcdermott@bridgeconnector.co"
+    username: "dmcdermott@bridgeconnector.co"
+    groups: ["system:masters"]
