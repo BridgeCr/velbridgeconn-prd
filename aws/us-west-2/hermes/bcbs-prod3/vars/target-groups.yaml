@@ -1,9 +1,9 @@
 target_groups:
-  BCBS-PRD-Mirth-ConsoleHTTP:
+  BCBS-PRD3-Mirth-ConsoleHTTP:
     path_pattern: "/ui-insecure/"
     backend_port: "8080"
     backend_protocol: "HTTP"
-  BCBS-PRD-Mirth-ConsoleHTTPS:
+  BCBS-PRD3-Mirth-ConsoleHTTPS:
     path_pattern: "/ui/"
     backend_port: "8443"
     backend_protocol: "HTTPS"

@@ -3,6 +3,7 @@ vpc_name: velbridgeconn
 bridge_domains:
   - bcrstage.azbcbs.us
   - bcrprod.azbcbs.us
+  - bcruat.azbcbs.us
 buckets:
   - azblue-bcr-automation-secrets.terraform/mirth-dev
   - azblue-bcr-automation-secrets.terraform/mirth-prod
