@@ -41,7 +41,7 @@ filebeatConfig:
       hosts: ['127.0.0.1']
     setup.ilm:
       enabled: auto
-      rollover_alias: "filebeat-prod-02"
+      rollover_alias: "filebeat-prod"
       pattern: "{now/d}-000001"
       check_exists: "true"
 
