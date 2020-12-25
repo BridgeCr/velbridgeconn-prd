@@ -1,6 +1,6 @@
 # restrict to changes to these domains
 domainFilters:
-  - bcrprod.azbcbs.us
+  - bcruat.azbcbs.us
 # descriptive text to show who created record
 txtOwnerId: "externaldns"
 aws:
