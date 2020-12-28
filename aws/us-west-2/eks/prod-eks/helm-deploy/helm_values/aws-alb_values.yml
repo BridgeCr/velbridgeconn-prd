@@ -1,4 +1,4 @@
-clusterName: bcbs-prod
+clusterName: azbcbs-prod
 awsRegion: "us-west-2"
 awsVpcID: "vpc-025c5fb7bddd4f741"
 
