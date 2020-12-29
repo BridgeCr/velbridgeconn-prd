@@ -22,6 +22,16 @@ ingress_with_cidr_blocks:
     protocol: 6
     cidr_blocks: "10.208.16.0/21"
     description: "BCBS Enrollment API"
+  - from_port: 14003
+    to_port: 14003
+    protocol: 6
+    cidr_blocks: "10.208.16.0/21"
+    description: "BCBS Enrollment API"
+  - from_port: 14005
+    to_port: 14005
+    protocol: 6
+    cidr_blocks: "10.208.16.0/21"
+    description: "BCBS Accumulators"
   - from_port: 9140
     to_port:  9140
     protocol: 6
