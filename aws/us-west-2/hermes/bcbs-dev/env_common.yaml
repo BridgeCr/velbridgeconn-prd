@@ -1,15 +1,15 @@
 # Name is used to name all resources
 # This is the name prefix where the suffix is the resource type
-name: bcbs-prd
+name: bcbs-dev
 
 # Bridge_domain is used for route53 record creation
-bridge_domain: bcrprod.azbcbs.us
+bridge_domain: bcrdev.azbcbs.us
 
 # This is the A record entry for the dns record
-r53_record: bcbs-prd
+r53_record: bcbs-dev
 
 # Description_prefix is concatenated with resource descriptions
-description_prefix: BCBS Prod Hermes
+description_prefix: BCBS Dev Hermes
 hermes_version: 3.7.1.b243
 
 # These tags are a sefault set
@@ -19,5 +19,5 @@ tags:
   App: Hermes
   Version: 3.7.1.b243
   TG_Managed: true
-  Env: bcbs-prd
+  Env: bcbs-dev
   EC2KeyName: bridge
