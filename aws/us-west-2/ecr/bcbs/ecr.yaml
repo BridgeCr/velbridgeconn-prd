@@ -1,0 +1,2 @@
+name          : "bcbs"
+scan_on_push  : false
