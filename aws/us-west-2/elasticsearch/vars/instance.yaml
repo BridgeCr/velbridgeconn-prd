@@ -1,0 +1,14 @@
+namespace                    : bcbs-es-stage
+stage                        : stage
+name                         : es-1
+zone_awareness_enabled       : true
+elasticsearch_version        : 7.7
+instance_type                : r5.large.elasticsearch
+instance_count               : 2
+ebs_volume_size              : 50
+iam_actions                  : ["es:ESHttpGet", "es:ESHttpPut", "es:ESHttpPost"]
+encrypt_at_rest_enabled      : true
+domain_hostname_enabled      : true
+kibana_subdomain_name        : kibana-1
+elasticsearch_subdomain_name : es
+create_iam_service_linked_role: false

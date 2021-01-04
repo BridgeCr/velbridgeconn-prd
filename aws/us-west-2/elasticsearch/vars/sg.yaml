@@ -1,0 +1,18 @@
+name: bcbs-es-stage-elasticsearch-1
+description: Security group for elasticsearch. Managed by terragrunt.
+allowed_ingress_cidrs: ["172.23.0.0/16,10.20.30.196/32"]
+
+tags:
+  Name: bcbs-es-stage-elasticsearch-1
+
+ingress_with_cidr_blocks:
+  - from_port: 0
+    to_port: 0
+    protocol: -1
+    cidr_blocks: "10.208.17.0/24,10.208.19.0/24,10.208.21.0/24"
+
+egress_with_cidr_blocks:
+  - from_port: 0
+    to_port: 0
+    protocol: -1
+    cidr_blocks: "0.0.0.0/0"

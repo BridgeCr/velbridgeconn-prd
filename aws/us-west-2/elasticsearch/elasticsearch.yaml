@@ -1,6 +1,0 @@
-encrypt_at_rest : true
-enforce_https   : true
-instance_type   : "c4.large"
-
-vpc_options     :
-  
