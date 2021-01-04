@@ -8,3 +8,8 @@ buckets:
   - azblue-bcr-automation-secrets.terraform/mirth-dev
   - azblue-bcr-automation-secrets.terraform/mirth-prod
   - azblue-bcr-automation-secrets.terraform/mirth-prod-2
+zone_id:
+  bcrstage: "Z024659216XF7BS6CGAQL"
+  bcrprod: "Z0083005VTALVK0ADS78"
+  bcruat: "Z04743592SMFGSEHD4ZAK"
+  azbcbs: "Z02559643U4MIL4DXV1D9"
